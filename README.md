@@ -15,7 +15,7 @@ There are 3 types of events:
 
 * You will be provided with a dump of sanitsed data
 * Use any technologies you want but be able to justify it
-* Keep detailed records of your findings so we can
+* Keep detailed records of your findings and approach so we can discuss it during the technical interview
 
 ## PART 1
 
@@ -41,5 +41,5 @@ Build probabilistic models using the data set to predict the likelihood that som
 What is the likelihood that someone:
 
 * in London who uses Chrome will Interact with of the adverts?
-
 * a Mobile user in Manchester clicks on a Horse Racing bet?
+* What other interesting conclusions could you draw?
