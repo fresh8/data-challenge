@@ -3,7 +3,7 @@ The technical challenge for the Data Engineer role at Fresh8
 
 ## Background
 
-The challenge is broken down into 3 separate parts which are aimed to test a number of technical abilities that we expect data engineers to possess at Fresh8.
+The challenge is broken down into 3 separate parts which are aimed to test a number of technical abilities that we expect data engineers to possess at Fresh8. At all times consider the value of the data set.
 
 There are 3 types of events:
 
@@ -24,13 +24,19 @@ Consider that you will need to enrich this data to achieve the goal.
 
 ## PART 2
 
-Create the following user funnels:
+Create the following user funnels and at each stage calculate the number of users:
 
-`Viewed > Interfacted > Clicked-Through`
+Funnel A: `Viewed > Interacted > Clicked-Through`
 
 and
 
-`Viewed > Clicked-Through`
+Funnel B: `Viewed > Clicked-Through`
+
+| Stage           | Users  |
+| ----------------|--------|
+| Viewed          | 100000 |
+| Interacted      | 50000  |
+| Clicked-Through | 2000   |
 
 What conclusions can we draw by interpreting these results, if at all.
 
