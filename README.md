@@ -20,17 +20,16 @@ There are 3 types of events:
 ## PART 1
 
 Analyse the dataset and determine the top 5 Browsers, Operating Systems and Cities and visualise the data so that it can be interpreted.
+How you visualise the data is up to you, but consider what you can achieve in the time.
 Consider that you will need to enrich this data to achieve the goal.
 
 ## PART 2
 
-Create the following user funnels and at each stage calculate the number of users:
+Create the following user funnel and at each stage calculate the number of users:
 
-Funnel A: `Viewed > Interacted > Clicked-Through`
+Funnel: `Viewed > Interacted > Clicked-Through`
 
-and
-
-Funnel B: `Viewed > Clicked-Through`
+You can present your findings like this:
 
 | Stage           | Users  |
 | ----------------|--------|
