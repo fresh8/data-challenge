@@ -22,25 +22,25 @@ The challenge consists of two tasks:
 
 1. Write an app that can generate core business events:
 
-	* Each event grouping will produce one of the following sets of events:
-		* `Viewed` (85%)
-		* `Viewed` -> `Interacted` (5%)
-		* `Viewed` -> `Click-Through` (5%)
-		* `Viewed` -> `Interacted` -> `Click-Through` (5%)
-	* The batch of events within a given interval should be stored in a line-delimited JSON file named `events-<timestamp>.json` ex. events-2017-05-14-18-47-29-879763.json
-	* The app must take 4 arguments
-		* number-of-groups - Number of event groups to generate which will each produce one or more events, based on the probability listed above.
-		* batch-size - Batch size of events per file.
-		* interval - Interval in seconds between each file being created.
-		* output-directory - Output directory for all created files.
-	* How to run the app
+* Each event grouping will produce one of the following sets of events:
+	* `Viewed` (85%)
+	* `Viewed` -> `Interacted` (5%)
+	* `Viewed` -> `Click-Through` (5%)
+	* `Viewed` -> `Interacted` -> `Click-Through` (5%)
+* The batch of events within a given interval should be stored in a line-delimited JSON file named `events-<timestamp>.json` ex. events-2017-05-14-18-47-29-879763.json
+* The app must take 4 arguments
+	* number-of-groups - Number of event groups to generate which will each produce one or more events, based on the probability listed above.
+	* batch-size - Batch size of events per file.
+	* interval - Interval in seconds between each file being created.
+	* output-directory - Output directory for all created files.
+* How to run the app
 
-		```bash
-		generate-events --number-of-groups=1000000 --batch-size=5000 --interval=1 --output-directory=<local-dir>
-		```
-	* Example shows a snippet of ten event groups from the content of a generated file. Each event is on its own line separated by a linebreak.
+```bash
+generate-events --number-of-groups=1000000 --batch-size=5000 --interval=1 --output-directory=<local-dir>
+```
+* Example shows a snippet of ten event groups from the content of a generated file. Each event is on its own line separated by a linebreak.
 
-		```json
+```json
 { "type": "Viewed", "data": { "viewId": "aa072e9e-cb04-45c8-9ad6-cfeae76dcbe7", "eventDateTime": "2018-05-14T12:00:00Z" } }
 { "type": "Interacted", "data": { "viewId": "aa072e9e-cb04-45c8-9ad6-cfeae76dcbe7", "eventDateTime": "2018-05-14T12:00:00Z"} }
 { "type": "Viewed", "data": { "viewId": "1665f348-086a-4781-9aad-4ede19535376", "eventDateTime": "2018-05-14T12:00:00Z" } }
@@ -55,21 +55,18 @@ The challenge consists of two tasks:
 { "type": "Viewed", "data": {"viewId": "6e820e8d-fc55-49dc-a017-818b756e4d31", "eventDateTime": "2018-05-14T12:00:00Z"} }
 { "type": "Viewed", "data": { "viewId": "3aea6700-ce17-4316-af27-e1fb79bd51af", "eventDateTime": "2018-05-14T12:00:00Z" } }
 { "type": "Viewed", "data": { "viewId": "f017a45c-0886-452f-b867-1b4586ae73bf", "eventDateTime": "2018-05-14T12:00:00Z"} }
-		```
-	* Every `Interacted` and `Click-Through` event must have a `Viewed` event with the same `viewId`.
+```
+* Every `Interacted` and `Click-Through` event must have a `Viewed` event with the same `viewId`.
 
 2. Write a streaming app:
 
-	* Monitor a given directory for new files.
-	* Process new files containing order events.
-	* Output a running total for each event type to the terminal.
-	* Keep a 5 second delay between each terminal output.
-
+* Monitor a given directory for new files.
+* Process new files containing order events.
+* Output a running total for each event type to the terminal.
+* Keep a 5 second delay between each terminal output.
 		ex. Terminal displaying a running total of each event type from the previous JSON snippet
-		```bash
-		"Viewed": 10
-		"Interacted": 2
-		"Click-Through": 2
-		```
-
-
+```bash
+"Viewed": 10
+"Interacted": 2
+"Click-Through": 2
+```
