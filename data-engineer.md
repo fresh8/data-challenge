@@ -28,7 +28,7 @@ Write an app that can generate core business events:
 	* `Viewed` -> `Interacted` (5%)
 	* `Viewed` -> `Click-Through` (5%)
 	* `Viewed` -> `Interacted` -> `Click-Through` (5%)
-* The batch of events within a given interval should be stored in a line-delimited JSON file named `events-<timestamp>.json` ex. events-2017-05-14-18-47-29-879763.json
+* The batch of events within a given interval should be stored in a line-delimited JSON file named `events-<timestamp>.json`, e.g. `events-2017-05-14-18-47-29-879763.json`
 * The app must take 4 arguments
 	* `number-of-groups` - Number of event groups to generate which will each produce one or more events, based on the probability listed above.
 	* `batch-size` - Batch size of events per file.
