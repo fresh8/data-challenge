@@ -6,8 +6,7 @@ Feel free to spend as much or as little time on the exercise as you like, as lon
 
 - Please complete at least one of the tasks described below.
 - You should provide clear instructions on your test setup and how to execute your tests. The clarity and precision of these instructions - and the ease with which the interviewers can execute them - will be a key part of the assessment. Please create a README file detailing said instructions. Please also use this file for listing any additional comments or observations you might want to share about your submission.
-
-You can create the solution in any language or framework of your choice.
+- Please use Go to complete your solution but use any libraries you would like but justify them
 
 To complete the challenge, please provide us with your codebase. This can either be in a new repository, provided to us as a compressed file, or any other method you feel is acceptable.
 
